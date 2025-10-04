@@ -8,6 +8,7 @@ on:
 
 jobs:
   say_hello:
+    name: Printing Hello
     runs-on: ubuntu-latest
 
     steps:
@@ -18,6 +19,7 @@ jobs:
       run: echo "Hello, World!"
   
   depended_job:
+    name: Job 2
     needs: [say_hello]
     runs-on: ubuntu-latest
 
